@@ -1,74 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html xml:lang="en">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Git--egit-beginner-workshop : " />
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css">
+    <title>Git & EGit beginner workshop</title>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<body id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 0;">
 
-    <title>Git--egit-beginner-workshop</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ilaborie/Git--EGit-beginner-workshop">View on GitHub</a>
-
-          <h1 id="project_title">Git--egit-beginner-workshop</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/ilaborie/Git--EGit-beginner-workshop/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/ilaborie/Git--EGit-beginner-workshop/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+<!-- Header -->
+<header>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Git &amp; EGit beginner workshop</a>
+            <ul class="nav">
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#slides">Slides</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+                <li><a href="#extra">More</a></li>
+                <li><a href="#quizz">Quiz</a></li>
+            </ul>
+        </div>
     </div>
+</header>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+<!-- Main -->
+<div id="main" class="container">
+    <section id="downloads">
+        <h1>Download</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <h2>Eclipse</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <h2>Slides</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <h2>Extra</h2>
+    </section>
 
-<h3>Designer Templates</h3>
+    <section id="slides">
+        <h1>Slides</h1>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+        <h2>Introduction</h2>
 
-<h3>Rather Drive Stick?</h3>
+        <h2>Installation &amp; Configuration</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+        <h2>Create a repository</h2>
 
-<h3>Authors and Contributors</h3>
+        <h2>Work Locally</h2>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+        <h2>Branches</h2>
 
-<h3>Support or Contact</h3>
+        <h2>Remotes</h2>
+    </section>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+    <section id="exercises">
+        <h1>Exercises</h1>
+
+        <h2>Introduction</h2>
+
+        <h2>Installation &amp; Configuration</h2>
+
+        <h2>Create a repository</h2>
+
+        <h2>Work Locally</h2>
+
+        <h2>Branches</h2>
+
+        <h2>Remotes</h2>
+    </section>
+
+    <section id="extra">
+        <h1>Extra</h1>
+
+        <h2>Terminology</h2>
+        <dl class="dl-horizontal">
+            <dt>master</dt>
+            <dd>the repository’s main branch. Depending on the work flow it is the one people work on or the one where
+                the integration happens
+            </dd>
+
+            <dt>remote</dt>
+            <dd>these are “remote” locations of your repository, normally on some central server.
+                SHA
+                every commit or node in the Git tree is identified by a unique SHA key. You can use them in various
+                commands
+                in order to manipulate a specific node.
+            </dd>
+            <dt>head</dt>
+            <dd>is a reference to the node to which our working space of the repository currently points.
+
+            <dt>branch</dt>
+            <dd>is just like in other VCS with the difference that a branch in Git is actually nothing more special than
+                a
+                particular label on a given node. It is not a physical copy of the files as in other popular VCS.
+            </dd>
+            <dt>clone</dt>
+            <dd>copies an existing git repository, normally from some remote location to your local environment.</dd>
+
+            <dt>commit</dt>
+            <dd>submitting files to the repository (the local one); in other VCS it is often referred to as “checkin”
+                fetch or pull
+                is like “update” or “get latest” in other VCS. The difference between fetch and pull is that pull
+                combines
+                both, fetching the latest code from a remote repo as well as performs the merging.
+            </dd>
+            <dt>push</dt>
+            <dd>is used to submit the code to a remote repository</dd>
+        </dl>
+        <h2>Links</h2>
+        <ul>
+            <li><a href="http://git-scm.com/">Git</a></li>
+            <li><a href="http://eclipse.org/jgit/">JGit</a></li>
+            <li><a href="http://eclipse.org/egit/">EGit</a></li>
+        </ul>
+
+    </section>
+
+    <section id="quizz">
+
+    </section>
+
+    <br><br><br><br>
+
+
+</div>
+<!-- Footer -->
+<footer id="footer" class="well well-small">
+    <hr>
+    <div class="container">
+        <p class="pull-right"><a href="#top">Back to top</a></p>
+
+        <div class="links">
+            <a href="https://github.com/ilaborie/Git--EGit-beginner-workshop/">GitHub</a>
+        </div>
+
+        Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br>
+
+        Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. <br>
+        Hosted on <a href="http://pages.github.com/">GitHub</a>. <br>
+        Icons from <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.<br>
+        Web fonts from <a href="http://www.google.com/webfonts">Google</a>. <br>
     </div>
+</footer>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Git--egit-beginner-workshop maintained by <a href="https://github.com/ilaborie">ilaborie</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<!-- Scripts -->
+<script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
+<script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/main.js" type="text/javascript"></script>
 
-    
-
-  </body>
+</body>
 </html>
