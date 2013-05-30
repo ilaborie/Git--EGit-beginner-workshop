@@ -5,7 +5,9 @@
     <meta charset='utf-8'/>
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css">
-    <title>Git &amp; EGit beginner workshop</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/prettify.css"/>
+    <script src="javascripts/lib/prettify/prettify.js" type="text/javascript"></script>
+    <title>Git &amp; EGit beginner workshop - Exo 5</title>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 0;">
@@ -39,7 +41,7 @@
             <li><a href="#exo5">Rebase</a></li>
         </ol>
         <article>
-            <h2 id="exo1">Branches Workflow</h2>
+            <h2 id="exo1">Import an existing repository</h2>
 
             <div>
                 <ul class="exercises">
@@ -47,30 +49,88 @@
                         Download the <a href="exo5/HelloWorld-5.zip">HelloWorld-5.zip</a>
                     </li>
                     <li>Unzip the <em>HelloWorld-5.zip</em></li>
-                    <li>In the <em>Git Repository Exploring</em></li>
+                    <li>In the <em>Git Repository Exploring</em> perspective select <code>Add an existing local Git
+                        repository</code></li>
                     <li>
-                        Import the with <code>File > Import... > General > Existing Projects into
-                        Workspace</code>. <br/>
-                        <img src="exo2/import.png" alt="Import HelloWorld Project"/>
+                        Select the unzipped folder
+                        <img src="exo5/AddExistingRepository.png" alt="Add an existing local Git repository"/>
                     </li>
-                    <li>Share the project with <code>HelloWorld > Team > Share Project ...</code>. <br/>
-                        <img src="exo2/share.png" alt="Share HelloWorld Project"/></li>
-                    <li>Switch to Git perspective to check that a new repository has been added:<br/>
-                        <img src="exo2/repo.png" alt="HelloWorld Repository"/></li>
+                    <li>
+                        Then import the existing project
+                        <img src="exo5/ImportExistingProject.png" alt="Import existing project"/>
+                    </li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <h2 id="exo2">Create an empty repository and start a project</h2>
+            <h2 id="exo2">Implements a feature</h2>
 
             <div>
                 <ul class="exercises">
-                    <li>Switch to Git perspective</li>
-                    <li>Create a new repository <code>Git Repositories > Create a new Git Repository</code>.<br/>
-                        <img src="exo2/newrepo.png" alt="HelloWorld Repository"/>
+                    <li>
+                        Switch to <em>Java</em> perspective
+                        <img src="exo5/InitialProject.png" alt="Initial Project"/>
                     </li>
-                    <li>Create a new project in your repository with the Eclipse wizard
+                    <li>
+                        <p class="text-info"><strong>Hint</strong><br/>
+                            It's a good idea to develop your features into dedicated branches
+                        </p>
+                        Create the <em>GreetingService</em> branch.
+                        Choose <code>Create Branch...</code> from <em>History</em> contextual menu.<br/>
+                        Or choose <code>Team &gt; Switch To &gt; New Branch...</code> in the <em>Package explorer</em>
+                        contextual menu.
+                        <img src="exo5/CreateBranch.png" alt="Create Branch"/>
+                    </li>
+                    <li>
+                        The current branch is <em>GreetingService</em>
+                        <img src="exo5/CurrentBranch.png" alt="Current Branch"/>
+                    </li>
+                    <li>
+                        Create the mighty GreetingService class and <code>Commit</code>
+                        <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
+package org.eclipsecon.egit.exo5;
+
+/**
+ * The GreetingService class provide greeting messages
+ */
+public class GreetingService {
+
+	/**
+	 * Return default greeting message
+	 * @return the greeting message
+	 */
+	public String greeting() {
+		return "Hello World !";
+	}
+}</pre>
+                    </li>
+                    <li>
+                        Update main with the GreetingService and <code>Commit</code>
+                        <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
+public static void main(String[] args) {
+		GreetingService greetingService = new GreetingService();
+		System.out.println(greetingService.greeting());
+	}</pre>
+                    </li>
+                    <li>
+                        <img src="exo5/Feature%20GreetingService.png" alt="Feature Greeting Service"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+
+        <article>
+            <h2 id="exo3">Fix some bugs</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>
+                        Checkout to <em>master</em> branch to fix these bugs.<br>
+                        Choose <code>Checkout</code> from the <em>History</em> view on the <em>master</em> branch.<br>
+                        Or choose <code>Team &gt; Switch To &gt; master</code> from <em>Package Explorer</em>.
+                        <img src="exo5/CheckoutMaster.png" alt="Checkout Master"/>
                     </li>
                 </ul>
             </div>
@@ -99,6 +159,7 @@
 <!-- Scripts -->
 <script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
 <script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
+
 <script src="javascripts/main.js" type="text/javascript"></script>
 
 </body>
