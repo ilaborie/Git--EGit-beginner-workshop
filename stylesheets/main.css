@@ -8434,3 +8434,10 @@ legend {
 body {
   font-family: 'Ubuntu', sans-serif;
 }
+#footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+#footer hr {
+  margin: 0;
+}
