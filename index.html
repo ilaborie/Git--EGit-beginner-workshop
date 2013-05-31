@@ -11,17 +11,7 @@
 <body id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 0;">
 
 <!-- Header -->
-<header>
-    <div class="navbar">
-        <div class="navbar-inner">
-            <a class="brand" href="#">Git &amp; EGit beginner workshop</a>
-            <ul class="nav">
-                <li><a href="#exercises">Exercises</a></li>
-                <li><a href="#extra">More</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+<script src="header.js"></script>
 
 <!-- Main -->
 <div id="main" class="container">
@@ -31,6 +21,12 @@
         <ul>
             <li><a href="exo1.html">Installation &amp; Configuration</a></li>
             <li><a href="exo2.html">Create Repositories</a></li>
+            <li><a href="exo3.html">Basic Operations</a></li>
+            <li><a href="exo4.html">Playing with Diff</a></li>
+            <li><a href="exo5.html">Branches</a></li>
+            <li><a href="exo6.html">Handle Conflicts</a></li>
+            <li><a href="exo7.html">Clone Repository</a></li>
+            <li><a href="exo8.html">Remote Workflow</a></li>
         </ul>
 
     </section>
@@ -73,6 +69,7 @@
             <dt>push</dt>
             <dd>is used to submit the code to a remote repository</dd>
         </dl>
+
         <h2>Links</h2>
         <ul>
             <li><a href="http://git-scm.com/">Git Official website</a></li>
@@ -82,6 +79,55 @@
             <li><a href="http://gitimmersion.com/">Git Immersion</a></li>
             <li><a href="http://try.github.io/">Github tutorial</a></li>
         </ul>
+
+        <h2>SVN and Git</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>SVN</th>
+                    <th>Git</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Workflow</th>
+                    <td>One</td>
+                    <td>Lot's of</td>
+                </tr>
+                <tr>
+                    <th>Topology</th>
+                    <td>Centralized</td>
+                    <td>Distributed</td>
+                </tr>
+                <tr>
+                    <th>Branch</th>
+                    <td>painful</td>
+                    <td>painless</td>
+                </tr>
+                <tr>
+                    <th>Speed</th>
+                    <td>depend of you computer, the server and the network</td>
+                    <td>depend of you computer</td>
+                </tr>
+                <tr>
+                    <th>Commit modification</th>
+                    <td>no</td>
+                    <td>with caution</td>
+                </tr>
+                <tr>
+                    <th>Offline mode</th>
+                    <td>no</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <th>Lock</th>
+                    <td>yes</td>
+                    <td>no</td>
+                </tr>
+
+            </tbody>
+        </table>
 
     </section>
 
@@ -93,24 +139,9 @@
 
 
 </div>
+
 <!-- Footer -->
-<footer id="footer" class="well well-small">
-    <hr>
-    <div class="container">
-        <p class="pull-right"><a href="#top">Back to top</a></p>
-
-        <div class="links">
-            <a href="https://github.com/ilaborie/Git--EGit-beginner-workshop/">GitHub</a>
-        </div>
-
-        Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br>
-
-        Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. <br>
-        Hosted on <a href="http://pages.github.com/">GitHub</a>. <br>
-        Icons from <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>.<br>
-        Web fonts from <a href="http://www.google.com/webfonts">Google</a>. <br>
-    </div>
-</footer>
+<script src="footer.js"></script>
 
 <!-- Scripts -->
 <script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
