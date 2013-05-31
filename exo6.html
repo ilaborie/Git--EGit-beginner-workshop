@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/prettify.css"/>
+    <title>Git &amp; EGit beginner workshop - Exo 5</title>
+</head>
+
+<body id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 0;">
+
+<!-- Header -->
+<script src="header.js"></script>
+
+<!-- Main -->
+
+<div id="main" class="container">
+    <section id="exercises">
+        <h1>Branches</h1>
+        <ol>
+            <li><a href="#exo0">Import an existing repository</a></li>
+            <li><a href="#exo1">Fix some issues</a></li>
+            <li><a href="#exo2">Implements another feature</a></li>
+            <li><a href="#exo3">Merge with Conflict</a></li>
+            <li><a href="#exo4">Rebase with Conflict</a></li>
+        </ol>
+        <article>
+            <h2 id="exo0">Import an existing repository</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>
+                        Download the <a href="exo6/HelloWorld-6.zip">HelloWorld-5.zip</a>.
+                    </li>
+                    <li>Unzip the <em>HelloWorld-5.zip</em>.</li>
+                    <li>Add the Git repository.</li>
+                    <li>
+                        Import the Project.
+                        <img src="exo6/Exo6.png" alt="Exercice 6"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <h2 id="exo1">Fix some issues</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Fix the Javadoc and <code>Commit</code>.</li>
+                    <li>
+                        Fix label and <code>Commit</code>.<br>
+                        <pre>System.out.println("Hello EclipseCon !");</pre>
+                        <img src="exo6/FixIssue.png" alt="Fix issues"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2 id="exo3">Implements another feature</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Create the <em>Arguments</em> branch.</li>
+                    <li>
+                        Update <em>Main</em> to handle 0 argument, and <code>Commit</code>.<br>
+                        <pre>public static void main(String[] args) {
+	if (args.length == 0) {
+		System.out.println("Hello EclipseCon !");
+	}
+}</pre>
+                    </li>
+                    <li>
+                        Update <em>Main</em> to handle more arguments and <code>Commit</code>.<br>
+                        <pre>public static void main(String[] args) {
+	if (args.length == 0) {
+		System.out.println("Hello EclipseCon !");
+	} else {
+		String greeting = String.format("Hello %s !", args[0]);
+		System.out.println(greeting);
+	}
+}</pre>
+                        <img src="exo6/Arguments.png"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2 id="exo4">Merge with Conflict</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Checkout to <em>master</em> branch</li>
+                    <li>
+                        Merge <em>master</em> with <em>GreetingService</em><br/>
+                        <img src="exo6/Merge.png" alt="Merge"/>
+                    </li>
+                    <li>
+                        <img src="exo6/MergeConflicts.png" alt="Merge Conflict"/><br>
+                        To solve the conflict you need to fix <em>Main</em>.<br>
+                        <pre>public static void main(String[] args) {
+	GreetingService greetingService = new GreetingService();
+	System.out.println(greetingService.greeting());
+}</pre>
+                        Add the <em>Main</em> to the staging area (mark the conflict resolved).<br>
+                        Report modification to <em>GreetingService</em>.<br>
+                        <pre>public String greeting() {
+	return "Hello EclipseCon !";
+}</pre>
+                        Stage the <em>GreetingService</em>.<br>
+                        Then <code>Commit</code>.
+                        <img src="exo6/MergeConflictsResolved.png"/>
+
+                        <p class="text-info"><strong>Note</strong><br>
+                            You can <code>Reset...</code> to cancel the merge
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2 id="exo5">Rebase with Conflict</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Checkout to <em>Arguments</em> branch</li>
+                    <li>
+                        Rebase on top of <em>master</em>.<br>
+                        <img src="exo6/Rebase-1.png" alt="Rebase"/>
+                    </li>
+                    <li>
+                        To solve the conflict, set <em>Start Merge Tool to resolve conflicts</em>.<br>
+                        Choose the <em>Use HEAD (...) of conflicting files</em>.<br>
+                        <img src="exo6/MergeTool.png" alt="Merge Tool"/>
+                    </li>
+                    <li>
+                        Merge the code:
+                        <pre>	public static void main(String[] args) {
+		GreetingService greetingService = new GreetingService();
+		if (args.length == 0) {
+			System.out.println(greetingService.greeting());
+		}
+	}</pre>
+                    </li>
+                    <li>
+                        Stage the <em>Main</em>.<br>
+                        Now we should continue the rebase. Choose <code>Team &gt; Rebase &gt; Continue Rebase</code> on
+                        the contextual menu of the project into the <em>Package Explorer</em> view.
+                    </li>
+                    <li>
+                        There is another conflicts with the second step of the rebase.<br>
+                        Fix it with:
+                        <pre>	public static void main(String[] args) {
+		GreetingService greetingService = new GreetingService();
+		if (args.length == 0) {
+			System.out.println(greetingService.greeting());
+		} else {
+			String greeting = String.format("Hello %s !", args[0]);
+			System.out.println(greeting);
+		}
+	}</pre>
+                    </li>
+                    <li>Stage the <em>Main</em> and <code>Continue Rebase</code>.<br></li>
+                    <li>
+                        The rebase finish successfully.<br>
+                        <img src="exo6/RebaseSuccess.png"/>
+                    </li>
+                    <p class="text-info"><strong>Note</strong><br>
+                        Don't be afraid by rebase, most of time conflicts are rare and easy to resolve.
+                        In the worst case you can <code>Abort Rebase</code> to retrieve the initial state.
+                    </p>
+                </ul>
+            </div>
+        </article>
+
+    </section>
+</div>
+<!-- Footer -->
+<script src="footer.js"></script>
+
+<!-- Scripts -->
+<script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
+<script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/main.js" type="text/javascript"></script>
+<script src="javascripts/lib/prettify/prettify.js" type="text/javascript"></script>
+
+</body>
+</html>
