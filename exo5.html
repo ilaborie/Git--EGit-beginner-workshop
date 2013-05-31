@@ -35,28 +35,29 @@
         <ol>
             <li><a href="#exo0">Import an existing repository</a></li>
             <li><a href="#exo1">Implements a feature</a></li>
-            <li><a href="#exo2">Fix some bugs</a></li>
+            <li><a href="#exo2">Fix some issues</a></li>
             <li><a href="#exo3">Implements another feature</a></li>
             <li><a href="#exo4">Merge</a></li>
             <li><a href="#exo5">Rebase</a></li>
         </ol>
         <article>
-            <h2 id="exo1">Import an existing repository</h2>
+            <h2 id="exo0">Import an existing repository</h2>
 
             <div>
                 <ul class="exercises">
                     <li>
-                        Download the <a href="exo5/HelloWorld-5.zip">HelloWorld-5.zip</a>
+                        Download the <a href="exo5/HelloWorld-5.zip">HelloWorld-5.zip</a>.
                     </li>
-                    <li>Unzip the <em>HelloWorld-5.zip</em></li>
+                    <li>Unzip the <em>HelloWorld-5.zip</em>.</li>
                     <li>In the <em>Git Repository Exploring</em> perspective select <code>Add an existing local Git
-                        repository</code></li>
+                        repository</code>.
+                    </li>
                     <li>
-                        Select the unzipped folder
+                        Select the unzipped folder.<br>
                         <img src="exo5/AddExistingRepository.png" alt="Add an existing local Git repository"/>
                     </li>
                     <li>
-                        Then import the existing project
+                        Then import the existing project.<br>
                         <img src="exo5/ImportExistingProject.png" alt="Import existing project"/>
                     </li>
                 </ul>
@@ -64,30 +65,30 @@
         </article>
 
         <article>
-            <h2 id="exo2">Implements a feature</h2>
+            <h2 id="exo1">Implements a feature</h2>
 
             <div>
                 <ul class="exercises">
                     <li>
-                        Switch to <em>Java</em> perspective
+                        Switch to <em>Java</em> perspective.<br>
                         <img src="exo5/InitialProject.png" alt="Initial Project"/>
                     </li>
                     <li>
                         <p class="text-info"><strong>Hint</strong><br/>
-                            It's a good idea to develop your features into dedicated branches
+                            It's always a good idea to develop your features into dedicated branches.
                         </p>
-                        Create the <em>GreetingService</em> branch.
+                        Create the <em>GreetingService</em> branch.<br>
                         Choose <code>Create Branch...</code> from <em>History</em> contextual menu.<br/>
-                        Or choose <code>Team &gt; Switch To &gt; New Branch...</code> in the <em>Package explorer</em>
-                        contextual menu.
+                        Or choose <code>Team &gt; Switch To &gt; New Branch...</code> in the <em>Package Explorer</em>
+                        contextual menu.<br>
                         <img src="exo5/CreateBranch.png" alt="Create Branch"/>
                     </li>
                     <li>
-                        The current branch is <em>GreetingService</em>
+                        The current branch is <em>GreetingService</em>.<br>
                         <img src="exo5/CurrentBranch.png" alt="Current Branch"/>
                     </li>
                     <li>
-                        Create the mighty GreetingService class and <code>Commit</code>
+                        Create the mighty GreetingService class and <code>Commit</code>.<br>
                         <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
 package org.eclipsecon.egit.exo5;
 
@@ -106,12 +107,12 @@ public class GreetingService {
 }</pre>
                     </li>
                     <li>
-                        Update main with the GreetingService and <code>Commit</code>
+                        Update main with the GreetingService and <code>Commit</code>.<br>
                         <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
 public static void main(String[] args) {
-		GreetingService greetingService = new GreetingService();
-		System.out.println(greetingService.greeting());
-	}</pre>
+	GreetingService greetingService = new GreetingService();
+	System.out.println(greetingService.greeting());
+}</pre>
                     </li>
                     <li>
                         <img src="exo5/Feature%20GreetingService.png" alt="Feature Greeting Service"/>
@@ -120,21 +121,96 @@ public static void main(String[] args) {
             </div>
         </article>
 
-
         <article>
-            <h2 id="exo3">Fix some bugs</h2>
+            <h2 id="exo2">Fix some issues</h2>
 
             <div>
                 <ul class="exercises">
                     <li>
                         Checkout to <em>master</em> branch to fix these bugs.<br>
                         Choose <code>Checkout</code> from the <em>History</em> view on the <em>master</em> branch.<br>
-                        Or choose <code>Team &gt; Switch To &gt; master</code> from <em>Package Explorer</em>.
+                        Or choose <code>Team &gt; Switch To &gt; master</code> from <em>Package Explorer</em>.<br>
                         <img src="exo5/CheckoutMaster.png" alt="Checkout Master"/>
+                    </li>
+                    <li>
+                        Fix the Javadoc and <code>Commit</code>.<br>
+                         <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
+/**
+* Program entry point
+* @param args arguments (Optional)
+*/</pre>
+                    </li>
+                    <li>
+                        Fix <em>.gitignore</em>.<br>
+                        <p class="text-info"><strong>Note</strong><br/>
+                            Use <em>Package Explorer</em> <code>Filters...</code> into the view menu to show
+                            dot-files.<br>
+                            Or go into <em>Git Repository Exploring</em> to edit the file into the <em>Working
+                                Directory.</em>
+                        </p>
+                        <img src="exo5/FixIssue.png" alt="Fix issues"/>
                     </li>
                 </ul>
             </div>
         </article>
+
+        <article>
+            <h2 id="exo3">Implements another feature</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Create the <em>Documentation</em> branch.</li>
+                    <li>Create the <em>README.md</em> file, and <code>Commit</code>.</li>
+                    <li>
+                        Fill the documentation and <code>Commit</code>.<br>
+                        <img src="exo5/AddDocumentation.png" alt="Add Documentation"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2 id="exo4">Merge</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Checkout to <em>master</em> branch</li>
+                    <li>
+                        Merge <em>master</em> with <em>GreetingService</em><br/>
+                        Choose <code>Team &gt; Merge...</code> from <em>Package Explorer</em> and select the <em>GreetingService</em>
+                        branch.<br/>
+                        Or choose <code>Merge</code> on the <em>GreetingService</em> branch of the <em>History</em> view.<br/>
+                        <img src="exo5/Merge.png" alt="Merge"/>
+                    </li>
+                    <li>
+                        <p class="text-info"><strong>Note</strong><br>
+                            You can disable <em>Show all Branches and Tags</em> to have a clearer view.
+                        </p>
+                        <img src="exo5/Merge2.png" alt="Merge"/>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2 id="exo5">Rebase</h2>
+
+            <div>
+                <ul class="exercises">
+                    <li>Checkout to <em>Documentation</em> branch</li>
+                    <li>
+                        Rebase on top of <em>master</em>.<br>
+                        Choose <code>Team &gt; Rebase...</code> from <em>Package Explorer</em> and select the <em>master</em>
+                        branch.<br/>
+                        Or choose <code>Rebase on Top of</code> on the <em>master</em> branch of the <em>History</em> view.<br/>
+                    </li>
+                    <li>
+                        <img src="exo5/Rebase.png" alt="Rebase" />
+                    </li>
+                </ul>
+            </div>
+        </article>
+
     </section>
 </div>
 <!-- Footer -->
