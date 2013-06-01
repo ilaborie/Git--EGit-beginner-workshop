@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/prettify.css"/>
-    <title>Git &amp; EGit beginner workshop - Exo 5</title>
+    <title>EGit workshop - Branches</title>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".subnav" data-offset="80" style="margin-top: 0;">
@@ -76,8 +76,7 @@
                     </li>
                     <li>
                         Create the mighty GreetingService class and <code>Commit</code>.<br>
-                        <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
-package org.eclipsecon.egit.exo5;
+                        <pre class="prettyprint java linenums">package org.eclipsecon.egit.exo5;
 
 /**
  * The GreetingService class provide greeting messages
@@ -95,8 +94,7 @@ public class GreetingService {
                     </li>
                     <li>
                         Update main with the GreetingService and <code>Commit</code>.<br>
-                        <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
-public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">public static void main(String[] args) {
 	GreetingService greetingService = new GreetingService();
 	System.out.println(greetingService.greeting());
 }</pre>
@@ -121,11 +119,10 @@ public static void main(String[] args) {
                     </li>
                     <li>
                         Fix the Javadoc and <code>Commit</code>.<br>
-                         <pre class="prettyprint java linenums" style="margin-bottom: 9px;">
-/**
-* Program entry point
-* @param args arguments (Optional)
-*/</pre>
+                         <pre class="prettyprint java linenums">/**
+ * Program entry point
+ * @param args arguments (Optional)
+ */</pre>
                     </li>
                     <li>
                         Fix <em>.gitignore</em>.<br>

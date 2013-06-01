@@ -51,7 +51,7 @@
                     <li>Fix the Javadoc and <code>Commit</code>.</li>
                     <li>
                         Fix label and <code>Commit</code>.<br>
-                        <pre>System.out.println("Hello EclipseCon !");</pre>
+                        <pre class="prettyprint java linenums">System.out.println("Hello EclipseCon !");</pre>
                         <img src="exo6/FixIssue.png" alt="Fix issues"/>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
                     <li>Create the <em>Arguments</em> branch.</li>
                     <li>
                         Update <em>Main</em> to handle 0 argument, and <code>Commit</code>.<br>
-                        <pre>public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">public static void main(String[] args) {
 	if (args.length == 0) {
 		System.out.println("Hello EclipseCon !");
 	}
@@ -74,7 +74,7 @@
                     </li>
                     <li>
                         Update <em>Main</em> to handle more arguments and <code>Commit</code>.<br>
-                        <pre>public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">public static void main(String[] args) {
 	if (args.length == 0) {
 		System.out.println("Hello EclipseCon !");
 	} else {
@@ -101,13 +101,13 @@
                     <li>
                         <img src="exo6/MergeConflicts.png" alt="Merge Conflict"/><br>
                         To solve the conflict you need to fix <em>Main</em>.<br>
-                        <pre>public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">public static void main(String[] args) {
 	GreetingService greetingService = new GreetingService();
 	System.out.println(greetingService.greeting());
 }</pre>
                         Add the <em>Main</em> to the staging area (mark the conflict resolved).<br>
                         Report modification to <em>GreetingService</em>.<br>
-                        <pre>public String greeting() {
+                        <pre class="prettyprint java linenums">public String greeting() {
 	return "Hello EclipseCon !";
 }</pre>
                         Stage the <em>GreetingService</em>.<br>
@@ -139,7 +139,7 @@
                     </li>
                     <li>
                         Merge the code:
-                        <pre>	public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">	public static void main(String[] args) {
 		GreetingService greetingService = new GreetingService();
 		if (args.length == 0) {
 			System.out.println(greetingService.greeting());
@@ -154,7 +154,7 @@
                     <li>
                         There is another conflicts with the second step of the rebase.<br>
                         Fix it with:
-                        <pre>	public static void main(String[] args) {
+                        <pre class="prettyprint java linenums">	public static void main(String[] args) {
 		GreetingService greetingService = new GreetingService();
 		if (args.length == 0) {
 			System.out.println(greetingService.greeting());

@@ -8434,9 +8434,13 @@ legend {
 body {
   font-family: 'Ubuntu', sans-serif;
 }
+code {
+  color: #196090 !important;
+  font-size: 12px;
+}
 #footer {
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
 }
 #footer hr {
   margin: 0;

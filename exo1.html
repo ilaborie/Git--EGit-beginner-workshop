@@ -2,112 +2,114 @@
 <html xml:lang="en">
 
 <head>
-<meta charset='utf-8' />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<link rel="stylesheet" type="text/css" media="screen"
-	href="stylesheets/main.css">
-<title>Git &amp; EGit beginner workshop</title>
-
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <link rel="stylesheet" type="text/css" media="screen"
+          href="stylesheets/main.css">
+    <title>EGit workshop - Installation</title>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".subnav" data-offset="80"
-	style="margin-top: 0;">
+      style="margin-top: 0;">
 
-	<!-- Header -->
-	<script src="header.js"></script>
+<!-- Header -->
+<script src="header.js"></script>
 
-	<!-- Main -->
-	<div id="main" class="container">
-		<section id="exercises">
+<!-- Main -->
+<div id="main" class="container">
+    <section id="exercises">
 
-			<h1 id="exo1">Installation &amp; Configuration</h1>
+        <h1 id="exo1">Installation &amp; Configuration</h1>
 
-			<div>
-				<p class="note">You will need a Java runtime environment (JRE)
-					to use Eclipse (Java SE 6 or greater is recommended).</p>
-				<ul class="exercises">
-					<li>Download the suitable Eclipse<br>
-						<ul>
-							<li><a href="download/eclipse-java-juno-SR2-win32.zip">eclipse-java-juno-SR2-win32.zip</a></li>
-							<li><a
-								href="download/eclipse-java-juno-SR2-win32-x86_64.zip">eclipse-java-juno-SR2-win32-x86_64.zip</a>
-							</li>
-							<li><a
-								href="download/eclipse-java-juno-SR2-linux-gtk.tar.gz">eclipse-java-juno-SR2-linux-gtk.tar.gz</a>
-							</li>
-							<li><a
-								href="download/eclipse-java-juno-SR2-macosx-cocoa-x86_64.tar.gz">eclipse-java-juno-SR2-macosx-cocoa-x86_64.tar.gz</a>
-							</li>
-							<li><a
-								href="download/eclipse-java-juno-SR2-macosx-cocoa.tar.gz">eclipse-java-juno-SR2-macosx-cocoa.tar.gz</a>
-							</li>
-						</ul> Or install EGit from <a
-						href="http://download.eclipse.org/egit/updates" target="_blank">the
-							update site</a>
+        <div>
+            <p class="note">You will need a Java runtime environment (JRE)
+                to use Eclipse (Java SE 6 or greater is recommended).</p>
+            <ul class="exercises">
+                <li>Download the suitable Eclipse<br>
+                    <ul>
+                        <li><a href="download/eclipse-java-juno-SR2-win32.zip">eclipse-java-juno-SR2-win32.zip</a></li>
+                        <li><a
+                                href="download/eclipse-java-juno-SR2-win32-x86_64.zip">eclipse-java-juno-SR2-win32-x86_64.zip</a>
+                        </li>
+                        <li><a
+                                href="download/eclipse-java-juno-SR2-linux-gtk.tar.gz">eclipse-java-juno-SR2-linux-gtk.tar.gz</a>
+                        </li>
+                        <li><a
+                                href="download/eclipse-java-juno-SR2-macosx-cocoa-x86_64.tar.gz">eclipse-java-juno-SR2-macosx-cocoa-x86_64.tar.gz</a>
+                        </li>
+                        <li><a
+                                href="download/eclipse-java-juno-SR2-macosx-cocoa.tar.gz">eclipse-java-juno-SR2-macosx-cocoa.tar.gz</a>
+                        </li>
+                    </ul>
+                    Or install EGit from <a
+                            href="http://download.eclipse.org/egit/updates" target="_blank">the
+                        update site</a>
 
-						<p class="text-info">
-							<strong>Note</strong><br>The EGit plugin is already packaged
-							into the <em>Eclipse IDE for Java Developers (Juno)</em>
-						</p>
-					</li>
-					<li>Simply unpack the package, then launch the executable in
-						the <code>eclipse/</code> folder.
-					</li>
-					<li>
-						<p class="text-info">
-							<strong>Note</strong><br> Git and EGit use the HOME folder
-							to store user configuration into the
-							<code>~/.gitconfig</code>
-							file
-						</p>
+                    <p class="text-info">
+                        <strong>Note</strong><br>The EGit plugin is already packaged
+                        into the <em>Eclipse IDE for Java Developers (Juno)</em>
+                    </p>
+                </li>
+                <li>Simply unpack the package, then launch the executable in
+                    the <code>eclipse/</code> folder.
+                </li>
+                <li>
+                    <p class="text-info">
+                        <strong>Note</strong><br> Git and EGit use the HOME folder
+                        to store user configuration into the
+                        <code>~/.gitconfig</code>
+                        file
+                    </p>
 
-						<p class="text-warning">
-							<strong>Windows only</strong><br> You can set the HOME
-							environment variable (if not set EGit will ask when you use EGit
-							for the first time).<br> If the HOME variable is not defined
-							the home directory will be calculated by concatenating HOMEDRIVE
-							and HOMEPATH.
-						</p>
-					</li>
-					<li>
-						<p class="text-info">
-							<strong>Hint</strong><br>Git needs to know who (user &
-							email) commits to a repository. Don’t worry: when EGit needs this
-							information for the first time it will ask you.
-						</p> You also can set this information later
-						<ul>
-							<li>go to <code>Window > Preferences > Team > Git >
-									Configuration</code></li>
-							<li>Click <code>New Entry</code> and enter the key <code>user.name</code>
-								<img src="exo1/set-name.png" alt="Configuration - Set Name" />
-							</li>
-							<li>Click <code>New Entry</code> and enter the key <code>user.email</code>
-								<img src="exo1/set-email.png" alt="Configuration - Set EMail" />
-							</li>
-						</ul>
-					</li>
-					<li>Take a quick look at
-						<ul>
-							<li>The preferences: <code>Window > Preferences >
-									Team > Git</code></li>
-							<li>The help: <code>Help > Help Contents > EGit
-									Documentation</code></li>
-							<li>The perspective: <code>Window > Open perspective
-									> Others ... > Git Repository Exploring</code></li>
-							<li>Views: <code>Window > Show View > Others ... >
-									Git</code></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-	</div>
-	<!-- Footer -->
-	<script src="footer.js"></script>
+                    <p class="text-warning">
+                        <strong>Windows only</strong><br> You can set the HOME
+                        environment variable (if not set EGit will ask when you use EGit
+                        for the first time).<br> If the HOME variable is not defined
+                        the home directory will be calculated by concatenating HOMEDRIVE
+                        and HOMEPATH.
+                    </p>
+                </li>
+                <li>
+                    <p class="text-info">
+                        <strong>Hint</strong><br>Git needs to know who (user &
+                        email) commits to a repository. Don’t worry: when EGit needs this
+                        information for the first time it will ask you.
+                    </p> You also can set this information later
+                    <ul>
+                        <li>go to <code>Window > Preferences > Team > Git >
+                            Configuration</code></li>
+                        <li>Click <code>New Entry</code> and enter the key <code>user.name</code>
+                            <img src="exo1/set-name.png" alt="Configuration - Set Name"/>
+                        </li>
+                        <li>Click <code>New Entry</code> and enter the key <code>user.email</code>
+                            <img src="exo1/set-email.png" alt="Configuration - Set EMail"/>
+                        </li>
+                    </ul>
+                </li>
+                <li>Take a quick look at
+                    <ul>
+                        <li>The preferences: <code>Window > Preferences >
+                            Team > Git</code></li>
+                        <li>The help: <code>Help > Help Contents > EGit
+                            Documentation</code></li>
+                        <li>The perspective: <code>Window > Open perspective
+                            > Others ... > Git Repository Exploring</code></li>
+                        <li>Views: <code>Window > Show View > Others ... >
+                            Git</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<!-- Footer -->
+<script src="footer.js"></script>
 
-	<!-- Scripts -->
-	<script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
-	<script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
-	<script src="javascripts/main.js" type="text/javascript"></script>
+<!-- Scripts -->
+<script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
+<script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/main.js" type="text/javascript"></script>
+<script src="javascripts/lib/prettify/prettify.js" type="text/javascript"></script>
 
 </body>
 </html>
