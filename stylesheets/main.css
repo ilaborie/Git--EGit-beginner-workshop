@@ -8435,8 +8435,9 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 code {
-  color: #196090 !important;
+  color: #8e44ad;
   font-size: 12px;
+  font-family: 'Ubuntu Mono', monaco, monospace;
 }
 #footer {
   margin: 0;
