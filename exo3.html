@@ -21,49 +21,81 @@
 		<section id="exercises">
 			<h1>Basic Operations</h1>
 			<ol>
-				<li><a href="#exo1">A First Commit</a></li>
-				<li><a href="#exo2">Removing a file</a></li>
-				<li><a href="#exo3">Moving a file</a></li>
+				<li><a href="#exo1">A first commit</a></li>
+				<li><a href="#exo2">A commit without staging</a></li>
+				<li><a href="#exo3">Removing and moving files</a></li>
 			</ol>
 			<article>
-				<h2 id="exo1">A First Commit</h2>
+				<h2 id="exo1">A first commit</h2>
 
 				<div>
 					<ul class="exercises">
-						<li>Create a new file Java files</li>
-						<li>Add .java file to the staged changes (drag&drop it in the
-							Git Staging View) <br /> <img src="exo3/add.PNG"
-							alt="add new file" />
-						</li>
-						<li>Ignore the .class file <code>file.class > Ignore</code> <br />
+						<li>Download, unzip and import <a
+							href="exo3/HelloWorld-3.zip">HelloWorld-3.zip</a>.<br> The
+							project contains an already initialized <i>Git</i> repository and
+							<i>Eclipse Java</i> project <br /> <img
+							src="exo3/NewProject.PNG" alt="new project" /></li>
+						<li>Open the <i>Git Staging view</i> in the <i>Git
+								perspective</i></li>
+						<li>Add the Main.java file to the staged changes <code>Main.java
+								&gt; Add to Git Index</code> <br /> <img src="exo3/add.PNG"
+							alt="add java file" />
 							<p class="text-info">
-								<strong>Note</strong><br> you can create a .gitignore file
-								in the project root and add the line
+								<strong>Note</strong><br /> You can remove and add files from
+								the <i>Staged Changes</i> through drag and drop.
+							</p>
+						</li>
+						<li>Ignore the Main.class file <code>Main.class &gt;
+								Ignore</code> <br> <img src="exo3/ignore.PNG"
+							alt="ignore class file" /><br />
+							<p class="text-info">
+								<strong>Note</strong><br /> you can create a .gitignore file in
+								the project root and add the line
 								<code>/bin</code>
 								to ignore all binary files
 							</p>
 						</li>
+						<li>Add the new .gitignore file</li>
 						<li>Enter a commit message</li>
-						<li>Press 'Commit'</li>
+						<li>Press <code>Commit</code><br /> <img
+							src="exo3/commit.PNG" alt="ignore class file" /></li>
 					</ul>
 				</div>
 			</article>
 
 			<article>
-				<h2 id="exo2">Removing a file</h2>
+				<h2 id="exo2">A commit without staging</h2>
 
 				<div>
 					<ul class="exercises">
-						<li>//TODO</li>
+						<li>Create a new <i>Java</i> file name NewClass. <code>org.eclipsecon.hello
+								&gt; New &gt; Class</code> <br> <img src="exo3/newFile.PNG"
+							alt="create NewClass" /></li>
+						<li>Open the commit GUI <code>Explorer Item &gt; Team
+								&gt; Commit</code></li>
+						<li>Select the files you want to commit</li>
+						<li>Enter a commit message and commit you changes<br> <img
+							src="exo3/commit2.PNG" alt="a second commit" /></li>
 					</ul>
 				</div>
 			</article>
 			<article>
-				<h2 id="exo3">Moving a file</h2>
+				<h2 id="exo3">Removing and moving files</h2>
 
 				<div>
 					<ul class="exercises">
-						<li>//TODO</li>
+						<li>As it is empty and has no point, delete the NewClass.java
+							file <code>NewClass.java &gt; Delete &gt; Yes</code>
+						</li>
+						<li>When creating the project, the read-me was wrongly name
+							RAEDME.txt. Rename it to README.txt <code>RAEDME.txt &gt;
+								Refactor &gt; Rename &gt; README.txt &gt; Yes</code>
+						</li>
+						<li>Open the <i>Git Staging view</i> in the <i>Git
+								perspective</i>. <i>Eclipse</i> has already added the changes to the
+							<i>Staged Changes</i> <img src="exo3/moveRemove.PNG"
+							alt="a move and a remove" /></li>
+						<li>Commit these changes</li>
 					</ul>
 				</div>
 			</article>
@@ -76,7 +108,8 @@
 	<script src="javascripts/lib/jquery.min.js" type="text/javascript"></script>
 	<script src="javascripts/lib/bootstrap.min.js" type="text/javascript"></script>
 	<script src="javascripts/main.js" type="text/javascript"></script>
-    <script src="javascripts/lib/prettify/prettify.js" type="text/javascript"></script>
+	<script src="javascripts/lib/prettify/prettify.js"
+		type="text/javascript"></script>
 
 </body>
 </html>
