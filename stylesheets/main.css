@@ -8431,13 +8431,23 @@ legend {
     background-color: #18bc9c;
   }
 }
+@font-face {
+  font-family: Ubuntu;
+  src: url(../font/ubuntu/Ubuntu-R.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: UbuntuMono;
+  src: url(../font/ubuntu/UbuntuMono-R.ttf);
+  font-weight: 400;
+}
 body {
   font-family: 'Ubuntu', sans-serif;
 }
 code {
   color: #8e44ad;
   font-size: 12px;
-  font-family: 'Ubuntu Mono', monaco, monospace;
+  font-family: 'UbuntuMono', monaco, monospace;
 }
 #footer {
   margin: 0;
