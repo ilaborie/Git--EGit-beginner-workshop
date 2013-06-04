@@ -23,26 +23,24 @@
 		<section id="exercises">
 			<h1>Basic remote workflow</h1>
 			<article>
-				<h2 id="exo0"></h2>
 
 				<div>
 					<ul class="exercises">
-						<li>Download, unzip and clone the <a
-							href="exo8/HelloWorld-8.zip">HelloWorld-8.git.zip</a>.<br>
-							remote repository
+						<li>Clone the <em>HelloWorld-8.git</em> remote repository
 						</li>
-						<li>Add the line: <pre class="prettyprint java">System.out.println("Hello EclipseCon!");</pre>
+						<li>Add the line: <pre class="prettyprint linenums java">System.out.println("Hello EclipseCon!");</pre>
 							to the <code>Main.java</code> file
 						</li>
-						<li>Commit this change<br /> <img src="exo8/commit.png"
+						<li>Commit this change<br /> <img src="exo8/commit.png" class="screenshot"
 							alt="Commit" /></li>
-						<li>Go to the <i>History view</i>. It should look like this:<br />
-							<img src="exo8/history1.png" alt="History 1" /></li>
+						<li>Go to the <em>History view</em>. It should look like this:<br />
+							<img src="exo8/history1.png" class="screenshot" alt="History 1" /></li>
 						<li>Click on <code>
 								HelloWorld-8 &gt; Team &gt; <img src="exo8/fetch.gif"
 									alt="Fetch" /> Fetch from Upstream
-							</code>. A pop-up window will appear listing all remote changes <br />
-							<img src="exo8/fetch.png" alt="Fetch" />
+							</code>.<br>
+                            A pop-up window will appear listing all remote changes <br />
+							<img src="exo8/fetch.png" class="screenshot" alt="Fetch" />
 							<p class="text-info">
 								<strong>Note</strong><br> The
 								<code>
@@ -55,20 +53,19 @@
 								item is sufficient.
 							</p>
 						</li>
-						<li>The <i>History view</i> should now look like this:<br />
-							<img src="exo8/history2.png" alt="History 2" /><br /> The local
+						<li>The <em>History view</em> should now look like this:<br />
+							<img src="exo8/history2.png" class="screenshot" alt="History 2" /><br /> The local
 							and remote <code>master</code> branches have diverged
 						</li>
-						<li>
 						<li>Click on <code>
 								HelloWorld-8 &gt; Team &gt; <img src="exo8/pull.gif" alt="Pull" />
 								Pull
 							</code> to incorporate the remote changes in your local branch. A pop-up
 							window will appear listing all remote changes <br /> <img
-							src="exo8/pull.png" alt="Pull" />
+							src="exo8/pull.png" class="screenshot" alt="Pull" />
 							<p class="text-info">
-								<strong>Note</strong><br> You can bypass the <i>fetch</i>
-								action, it is always executed before a <i>pull</i>.
+								<strong>Note</strong><br> You can bypass the <em>fetch</em>
+								action, it is always executed before a <em>pull</em>.
 							</p>
 						</li>
 
@@ -76,11 +73,11 @@
 								HelloWorld-8 &gt; Team &gt; <img src="exo8/push.gif" alt="Push" />
 								Push to Upstream
 							</code>. A pop-up window will appear detailing what has been uploaded. <br />
-							<img src="exo8/push.png" alt="Push" />
+							<img src="exo8/push.png" class="screenshot" alt="Push" />
 							<p class="text-warning">
-								<strong>Warning</strong><br> You can only <i>push</i> a
+								<strong>Warning</strong><br> You can only <em>push</em> a
 								branch when it is ahead of its remote counterpart. <br /> To be
-								sure of this, you should always <i>pull</i> before <i>pushing</i>
+								sure of this, you should always <em>pull</em> before <em>pushing</em>
 							</p>
 							<p class="text-info">
 								<strong>Note</strong><br> The

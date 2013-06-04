@@ -25,20 +25,19 @@
 				<h1>Playing with Diff</h1>
 				<div>
 					<ul class="exercises">
-						<li>Download, unzip, import and share <a
-							href="exo4/HelloWorld-4.zip">HelloWorld-4.zip</a>.<br> The
-							project contains a <i>Git</i> repository with a short history.
+						<li>Close opened projects and open the <em>HelloWorld-4</em> project<br>
+                            The project contains a <i>Git</i> repository with a short history.
 						</li>
 						<li>Modify the Main class to use <code>String.format()</code>
 							instead of <code>MessageFormat.format()</code>. Replace <pre
-								class="prettyprint java">System.out.println(MessageFormat.format("Hi {0}!",name));</pre>
-							with <pre class="prettyprint java">System.out.println(String.format("Hi %s!",name));</pre>
+								class="prettyprint java linenums">System.out.println(MessageFormat.format("Hi {0}!",name));</pre>
+							with <pre class="prettyprint java linenums">System.out.println(String.format("Hi %s!",name));</pre>
 						</li>
 						<li>The file is now both <i>staged</i> and <i>modified</i> <br />
-							<img src="exo4/staging.png" alt="Staging View" /></li>
+							<img src="exo4/staging.png" class="screenshot" alt="Staging View" /></li>
 						<li>Right-click on <code>Main.java</code> and click on <code>Compare
 								with &gt; Git Index</code> to display the diff between the working
-							version and the staged version of the file<br /> <img
+							version and the staged version of the file<br /> <img class="screenshot"
 							src="exo4/diff1.png" alt="Diff with staging" />.
 							<p class="text-info">
 								<strong>Note</strong><br> You can also display this diff by
@@ -47,7 +46,7 @@
 						</li>
 						<li>In the same menu, click on <code>Compare with &gt;
 								HEAD Revision</code> to display the diff between the working version
-							and the last comitted version of the file<br /> <img
+							and the last comitted version of the file<br /> <img class="screenshot"
 							src="exo4/diff2.png" alt="Diff with HEAD" />.
 						</li>
 						<li>Still in the same menu, click on <code>Compare
@@ -55,8 +54,8 @@
 						</li>
 						<li>Select the <code>Created Project</code> commit to display
 							the diff between the working version and version of the filein
-							that commit<br /> <img src="exo4/commit.png"
-							alt="Commit Selection" /><br /> <img src="exo4/diff3.png"
+							that commit<br /> <img src="exo4/commit.png"       class="screenshot"
+							alt="Commit Selection" /><br /> <img src="exo4/diff3.png"            class="screenshot"
 							alt="Diff with commit" />.
 						</li>
 						<li>The <code>Compare With</code> menu contains other types

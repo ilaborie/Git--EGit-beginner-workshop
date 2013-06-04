@@ -20,45 +20,31 @@
     <section id="exercises">
         <h1>Branches</h1>
         <ol>
-            <li><a href="#exo0">Import an existing repository</a></li>
             <li><a href="#exo1">Fix some issues</a></li>
             <li><a href="#exo2">Implements another feature</a></li>
             <li><a href="#exo3">Merge with Conflict</a></li>
             <li><a href="#exo4">Rebase with Conflict</a></li>
         </ol>
         <article>
-            <h2 id="exo0">Import an existing repository</h2>
-
-            <div>
-                <ul class="exercises">
-                    <li>
-                        Download and unzip the <a href="exo6/HelloWorld-6.zip">HelloWorld-6.zip</a>.
-                    </li>
-                    <li>Add the Git repository.</li>
-                    <li>
-                        Import the Project.
-                        <img src="exo6/Exo6.png" alt="Exercice 6"/>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article>
             <h2 id="exo1">Fix some issues</h2>
 
             <div>
                 <ul class="exercises">
+                    <li>
+                        Close opened projects and open the <em>HelloWorld-6</em> project<br>
+                    </li>
                     <li>Fix the Javadoc and <code>Commit</code>.</li>
                     <li>
                         Fix label and <code>Commit</code>.<br>
                         <pre class="prettyprint java linenums">System.out.println("Hello EclipseCon !");</pre>
-                        <img src="exo6/FixIssue.png" alt="Fix issues"/>
+                        <img src="exo6/FixIssue.png" class="screenshot" alt="Fix issues"/>
                     </li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <h2 id="exo3">Implements another feature</h2>
+            <h2 id="exo2">Implements another feature</h2>
 
             <div>
                 <ul class="exercises">
@@ -81,24 +67,24 @@
 		System.out.println(greeting);
 	}
 }</pre>
-                        <img src="exo6/Arguments.png"/>
+                        <img src="exo6/Arguments.png" class="screenshot"/>
                     </li>
                 </ul>
             </div>
         </article>
 
         <article>
-            <h2 id="exo4">Merge with Conflict</h2>
+            <h2 id="exo3">Merge with Conflict</h2>
 
             <div>
                 <ul class="exercises">
                     <li>Checkout to <em>master</em> branch</li>
                     <li>
                         Merge <em>master</em> with <em>GreetingService</em><br/>
-                        <img src="exo6/Merge.png" alt="Merge"/>
+                        <img src="exo6/Merge.png" alt="Merge" class="screenshot"/>
                     </li>
                     <li>
-                        <img src="exo6/MergeConflicts.png" alt="Merge Conflict"/><br>
+                        <img src="exo6/MergeConflicts.png" alt="Merge Conflict" class="screenshot"/><br>
                         To solve the conflict you need to fix <em>Main</em>.<br>
                         <pre class="prettyprint java linenums">public static void main(String[] args) {
 	GreetingService greetingService = new GreetingService();
@@ -111,7 +97,7 @@
 }</pre>
                         Stage the <em>GreetingService</em>.<br>
                         Then <code>Commit</code>.
-                        <img src="exo6/MergeConflictsResolved.png"/>
+                        <img src="exo6/MergeConflictsResolved.png" class="screenshot"/>
 
                         <p class="text-info"><strong>Note</strong><br>
                             You can <code>Reset...</code> to cancel the merge
@@ -122,19 +108,23 @@
         </article>
 
         <article>
-            <h2 id="exo5">Rebase with Conflict</h2>
+            <h2 id="exo4">Rebase with Conflict</h2>
 
             <div>
                 <ul class="exercises">
                     <li>Checkout to <em>Arguments</em> branch</li>
                     <li>
                         Rebase on top of <em>master</em>.<br>
-                        <img src="exo6/Rebase-1.png" alt="Rebase"/>
+                        <img src="exo6/Rebase-1.png" alt="Rebase" class="screenshot"/>
                     </li>
                     <li>
                         To solve the conflict, set <em>Start Merge Tool to resolve conflicts</em>.<br>
                         Choose the <em>Use HEAD (...) of conflicting files</em>.<br>
-                        <img src="exo6/MergeTool.png" alt="Merge Tool"/>
+                        <img src="exo6/MergeTool.png" alt="Merge Tool" class="screenshot"/>
+                        <p class="text-info"><strong>Note</strong><br>
+                            EGit 3.0 improved displaying conflicts a bit nicer and also features 3 way comparison in more places.<br>
+                            EGit 3.0 is coming with <em>Kepler</em>
+                        </p>
                     </li>
                     <li>
                         Merge the code:
@@ -166,7 +156,7 @@
                     <li>Stage the <em>Main</em> and <code>Continue Rebase</code>.<br></li>
                     <li>
                         The rebase finish successfully.<br>
-                        <img src="exo6/RebaseSuccess.png"/>
+                        <img src="exo6/RebaseSuccess.png" class="screenshot"/>
                     </li>
                     <p class="text-info"><strong>Note</strong><br>
                         Don't be afraid by rebase, most of time conflicts are rare and easy to resolve.
