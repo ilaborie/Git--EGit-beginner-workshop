@@ -17,6 +17,7 @@ $(function () {
         $.ajax({
             url: "http://192.168.42.1/repo/create",
             data: $form.serialize(),
+            method: "POST",
             success: function (value) {
                 var $elt = $("#created");
                 $elt.show();
