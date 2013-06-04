@@ -15,7 +15,7 @@ $(function () {
     var $form = $("#createRemoteRepo");
     $form.submit(function (e) {
         $.ajax({
-            url: "http://192.168.42.1/repo/create",
+            url: "http://192.168.42.1/create/repo",
             data: $form.serialize(),
             method: "POST",
             success: function (value) {
@@ -29,6 +29,7 @@ $(function () {
         e.preventDefault();
         return false;
     });
+
 })
 ;
 

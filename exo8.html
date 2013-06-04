@@ -27,12 +27,12 @@
             <div>
                 <ul class="exercises">
                     <li>
-                        <form id="createRemoteRepo" action="http://192.168.42.1/repo/create" method="POST" target="_blank">
+                        <form id="createRemoteRepo" action="http://192.168.42.1/create/repo" method="POST" target="_blank">
                             <p class="text-warning"><strong>Only if you are connected to a RapsberryPi</strong></p>
                             <label for="name">Create a remote repository</label>
 
                             <div class="input-append">
-                                <input type="text" id="name" name="name" placeholder="Repository name"/>
+                                <input type="text" id="name" name="name" placeholder="Repository name" autofocus="true"/>
                                 <button type="submit" class="btn btn-primary">Create</button>
                             </div>
                         </form>
