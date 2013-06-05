@@ -19,10 +19,16 @@ $(function () {
             data: $form.serialize(),
             method: "POST",
             success: function (value) {
-                var $elt = $("#created");
+                var $elt = $("#created")
+                    .append('Your remote repository URL is <em>http://192.168.42.1/git/' + value + '</em>.<br>')
+                    .append('Go to <a href="/gitweb?p=' + value + '" target="_blank">remote server</a>');
                 $elt.show();
-                $elt.find("em").append("http://192.168.42.1/git/" + value);
-                $elt.find("a").attr("href", "/gitweb?p=" + value);
+            },
+            error: function () {
+                $("#created").empty()
+                    .append('<p class="text-error"><strong>Oops !</strong><br>' +
+                        'Failure, use the fallback solution above' +
+                        '</p>')
             }
         });
 
